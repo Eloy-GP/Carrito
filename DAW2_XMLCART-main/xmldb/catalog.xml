@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<catalog>
+    <product_item>
+        <id_product>10</id_product>
+        <quantity>5</quantity>
+        <price_item>
+            <price>0</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+    <product_item>
+        <id_product>5</id_product>
+        <quantity>5</quantity>
+        <price_item>
+            <price>0</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+    <product_item>
+        <id_product>5</id_product>
+        <quantity>5</quantity>
+        <price_item>
+            <price>0</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>     
+<product_item><id_product>20</id_product><quantity>0</quantity><price_item><price>0</price><currency>EU</currency></price_item></product_item><product_item><id_product>25</id_product><quantity>42</quantity><price_item><price>0</price><currency>EU</currency></price_item></product_item><product_item><id_product>250</id_product><quantity>91</quantity><price_item><price>0</price><currency>EU</currency></price_item></product_item></catalog>
