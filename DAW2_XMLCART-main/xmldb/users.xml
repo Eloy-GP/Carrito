@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<users>
+    <user>
+        <username>root1</username>
+        <password>root1</password>
+    </user>
+    <user>
+        <username>root2</username>
+        <password>root2</password>
+    </user>
+<user><username>root3</username><password>$2y$10$0nFV.RnfSBXQDxMrJHps5eTtuCfJzbdLLrjpSzdVpQ8ti4NY3WxE.</password></user></users>
