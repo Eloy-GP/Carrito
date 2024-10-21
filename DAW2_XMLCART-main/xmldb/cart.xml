@@ -1,11 +1,2 @@
 <?xml version="1.0"?>
-<cart>
-    <product_item>
-        <id_product>20</id_product>
-        <quantity>1</quantity>
-        <price_item>
-            <price>50</price>
-            <currency>EU</currency>
-        </price_item>
-    </product_item>
-</cart>
+<cart><product_item><id_product>20</id_product><quantity>3</quantity><price_item><subtotal>50.00</subtotal><total_with_iva>60.50</total_with_iva><currency>EU</currency></price_item></product_item></cart>

@@ -37,6 +37,12 @@ function AddToCart($id_prod, $quantity) {
 //////////////////////////////////////////////////////
 function _ExecuteAddToCart($id_prod, $quantity, $price) {
     global $cart_file;
+    $iva_percentage = 21; // Definir el porcentaje de IVA, por ejemplo, 21%
+
+    // Calcular el subtotal y el total con IVA
+    $subtotal = $price; // Precio sin IVA
+    $iva_amount = ($subtotal * $iva_percentage) / 100; // IVA en función del subtotal
+    $total_with_iva = $subtotal + $iva_amount; // Precio con IVA incluido
 
     // Obtener el carrito actual
     $cart = GetCart();
@@ -46,16 +52,18 @@ function _ExecuteAddToCart($id_prod, $quantity, $price) {
     $item->addChild('id_product', $id_prod);
     $item->addChild('quantity', $quantity);
 
-    // Añadir el precio al carrito
+    // Añadir los precios al carrito (subtotal y total con IVA)
     $item_price = $item->addChild('price_item');
-    $item_price->addChild('price', $price); // Usamos el precio obtenido del catálogo
+    $item_price->addChild('subtotal', number_format($subtotal, 2)); // Subtotal sin IVA
+    $item_price->addChild('total_with_iva', number_format($total_with_iva, 2)); // Total con IVA
     $item_price->addChild('currency', 'EU');
 
     // Guardar el carrito actualizado
     $cart->asXML($cart_file);
 
-    echo "$id_prod añadido al carrito con el precio $price EUR.<br>";
+    echo "$id_prod añadido al carrito con un subtotal de $subtotal EUR y total con IVA de $total_with_iva EUR.<br>";
 }
+
 
 
 //////////////////////////////////////////////////////
@@ -205,20 +213,30 @@ function CalculateCartTotal() {
 
     // Obtener el carrito actual
     $cart = GetCart();
-    $total = 0;
+    $subtotal_total = 0;
+    $total_with_iva_total = 0;
 
     // Recorrer los productos del carrito
     foreach ($cart->product_item as $product) {
         $quantity = (int)$product->quantity;
-        $price = (float)$product->price_item->price;
-        
-        // Sumar el subtotal de cada producto al total
-        $total += $quantity * $price;
+        $subtotal = (float)$product->price_item->subtotal;
+        $total_with_iva = (float)$product->price_item->total_with_iva;
+
+        // Sumar los subtotales y totales con IVA
+        $subtotal_total += $quantity * $subtotal;
+        $total_with_iva_total += $quantity * $total_with_iva;
     }
 
-    echo "Total del carrito: " . number_format($total, 2) . " EUR<br>";
-    return $total;
+    // Mostrar los totales
+    echo "Subtotal del carrito (sin IVA): " . number_format($subtotal_total, 2) . " EUR<br>";
+    echo "Total del carrito (con IVA): " . number_format($total_with_iva_total, 2) . " EUR<br>";
+
+    return [
+        'subtotal' => $subtotal_total,
+        'total_with_iva' => $total_with_iva_total
+    ];
 }
+
 
 
 
