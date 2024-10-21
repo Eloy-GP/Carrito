@@ -10,7 +10,7 @@
     </product_item>
     <product_item>
         <id_product>20</id_product>
-        <quantity>0</quantity>
+        <quantity>79</quantity>
         <price_item>
             <price>50</price>
             <currency>EU</currency>
@@ -21,14 +21,6 @@
         <quantity>5</quantity>
         <price_item>
             <price>40</price>
-            <currency>EU</currency>
-        </price_item>
-    </product_item>
-    <product_item>
-        <id_product>20</id_product>
-        <quantity>0</quantity>
-        <price_item>
-            <price>0</price>
             <currency>EU</currency>
         </price_item>
     </product_item>

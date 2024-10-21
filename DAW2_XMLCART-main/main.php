@@ -11,23 +11,15 @@ include_once("com/users/users.php");
 
 // DeleteProductQuantityFromCart('5', 17); // Elimina 2 unidades del producto con ID 123 del carrito
 //CalculateCartTotal(); // Mostrará y calculará el total del carrito
-// AddToCart('20', 1);
+AddToCart('20', 1);
 //ExistProduct(10);
+
 // RegisterUser('root3', 'pwd123');
-if (LoginUser('root3', 'pwd123')) {
-    // Usuario inicia sesión, se crea su carrito.
-    // DeleteProductQuantityFromCart('5', 17); 
-    // Elimina 2 unidades del producto con ID 123 del carrito
-    CalculateCartTotal(); // Mostrará y calculará el total del carrito
-    AddToCart('20', 1);
-}
-// DisplayCart(); // Mostrar solo el carrito del usuario logueado
-Logout();
 
 
 
 
-//UserRegister('DNI','NOmbre')
+
 
 
 
