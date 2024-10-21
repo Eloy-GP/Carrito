@@ -156,6 +156,26 @@ function DeleteProductFromCatalog($id_prod) {
     // Guardar el catálogo actualizado
     $catalog->asXML($catalog_file);
 }
+//////////////////////////////////////////////////////
+function GetProductPriceFromCatalog($id_prod) {
+    global $catalog_file;
+
+    // Si el archivo del catálogo existe, lo cargamos
+    if (file_exists($catalog_file)) {
+        $catalog = simplexml_load_file($catalog_file);
+
+        // Buscar el producto en el catálogo
+        foreach ($catalog->product_item as $product) {
+            if ((string)$product->id_product == (string)$id_prod) {
+                return (float)$product->price_item->price; // Devolver el precio
+            }
+        }
+    }
+
+    echo "El producto $id_prod no se encontró en el catálogo.<br>";
+    return null; // Si no se encuentra el producto, devuelve null
+}
+
 
 
 ?>

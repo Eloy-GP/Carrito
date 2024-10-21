@@ -2,26 +2,50 @@
 <catalog>
     <product_item>
         <id_product>10</id_product>
+        <quantity>3</quantity>
+        <price_item>
+            <price>90</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+    <product_item>
+        <id_product>20</id_product>
+        <quantity>4</quantity>
+        <price_item>
+            <price>50</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+    <product_item>
+        <id_product>30</id_product>
         <quantity>5</quantity>
+        <price_item>
+            <price>40</price>
+            <currency>EU</currency>
+        </price_item>
+    </product_item>
+    <product_item>
+        <id_product>20</id_product>
+        <quantity>0</quantity>
         <price_item>
             <price>0</price>
             <currency>EU</currency>
         </price_item>
     </product_item>
     <product_item>
-        <id_product>5</id_product>
-        <quantity>5</quantity>
+        <id_product>25</id_product>
+        <quantity>42</quantity>
         <price_item>
-            <price>0</price>
+            <price>500</price>
             <currency>EU</currency>
         </price_item>
     </product_item>
     <product_item>
-        <id_product>5</id_product>
-        <quantity>5</quantity>
+        <id_product>250</id_product>
+        <quantity>91</quantity>
         <price_item>
-            <price>0</price>
+            <price>100</price>
             <currency>EU</currency>
         </price_item>
-    </product_item>     
-<product_item><id_product>20</id_product><quantity>0</quantity><price_item><price>0</price><currency>EU</currency></price_item></product_item><product_item><id_product>25</id_product><quantity>42</quantity><price_item><price>0</price><currency>EU</currency></price_item></product_item><product_item><id_product>250</id_product><quantity>91</quantity><price_item><price>0</price><currency>EU</currency></price_item></product_item></catalog>
+    </product_item>
+</catalog>
