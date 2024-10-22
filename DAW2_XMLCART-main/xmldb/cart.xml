@@ -2,7 +2,7 @@
 <cart>
     <product_item>
         <id_product>20</id_product>
-        <quantity>4</quantity>
+        <quantity>9</quantity>
         <price_item>
             <subtotal>50.00</subtotal>
             <total_with_iva>60.50</total_with_iva>

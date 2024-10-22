@@ -92,7 +92,7 @@ function GetCart() {
 
     // Si el archivo existe, lo cargamos; si no, creamos un nuevo carrito vacío
     if (file_exists($cart_file)) {
-        echo 'El archivo del carrito existe <br>';
+        
         $cart = simplexml_load_file($cart_file);
     } else {
         $cart = new SimpleXMLElement('<cart></cart>');
